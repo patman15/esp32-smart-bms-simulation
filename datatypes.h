@@ -13,7 +13,7 @@ typedef struct smartbmsutilRunInfo {
    int16_t dummy1;
    int16_t dummy2;
    int16_t dummy3;
-   int16_t dummy4;
+   int16_t remCapacity;
    int16_t countBatteryVoltages;
    int16_t countBatteryTemp;
    int16_t cycle;

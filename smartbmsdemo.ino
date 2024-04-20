@@ -5,6 +5,7 @@
 #define MIN_CURRENT_AMP 1
 #define MAX_CURRENT_VOLT 14
 #define MAX_CURRENT_AMP 100
+#define CAPACITY 384
 #define STEPS_VOLT 1
 #define STEPS_AMP 1
 #define READ_PACKET_OVERHEAD_LENGTH 5
@@ -76,7 +77,7 @@ void smartbmsdemoFillSmartbmsutilRunInfo(SmartbmsutilRunInfo *currentSmartbmsuti
   currentSmartbmsutilRunInfo->dummy1 = 0;
   currentSmartbmsutilRunInfo->dummy2 = 0;
   currentSmartbmsutilRunInfo->dummy3 = 0;
-  currentSmartbmsutilRunInfo->dummy4 = 0;
+  currentSmartbmsutilRunInfo->remCapacity = (CAPACITY*currentCharge/100); // remaining capacity (0,1Ah)
   currentSmartbmsutilRunInfo->countBatteryVoltages = COUNT_BATTERIES; // count battery volt
   currentSmartbmsutilRunInfo->countBatteryTemp = COUNT_BATTERIES; // count battery temperatures (max-> 8)
   currentSmartbmsutilRunInfo->cycle = 57;

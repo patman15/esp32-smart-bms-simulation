@@ -57,7 +57,7 @@ All positions needs 2 bytes:
 - Position 45: ???
 - Position 46: ???
 - Position 47: ???
-- Position 48: ???
+- Position 48: remaining capacity (0,1 Ah)
 - Position 49: count battery volt
 - Position 50: count battery temperatures (max. 8)
 - Position 51: cycle
@@ -65,7 +65,7 @@ All positions needs 2 bytes:
 - Position 53: CDMOS on/off (1 = on, everything else off)
 - Position 54: FDMOS on/off
 - Position 55: average voltage (in mV)
-- Position 56: differential voltage (in mV)   
+- Position 56: differential voltage (in mV)
 - Position 57: current KW (in W)
 - Position 58: Alarm1
 - Position 59: Alarm2
