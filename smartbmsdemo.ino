@@ -85,7 +85,7 @@ void smartbmsdemoFillSmartbmsutilRunInfo(SmartbmsutilRunInfo *currentSmartbmsuti
   currentSmartbmsutilRunInfo->cdmos = 0;
   currentSmartbmsutilRunInfo->fdmos = 1;
   currentSmartbmsutilRunInfo->avgVoltage = averageCellVoltage; // average voltage (in mV)
-  currentSmartbmsutilRunInfo->diffVoltage = 4000; // differential voltage (in mV)
+  currentSmartbmsutilRunInfo->diffVoltage = (COUNT_BATTERIES - 1) * 10; // differential voltage (in mV)
   currentSmartbmsutilRunInfo->currentKw = currentKw; // current KW (in W)
   currentSmartbmsutilRunInfo->alarm1 = 0;
   currentSmartbmsutilRunInfo->alarm2 = 0;
