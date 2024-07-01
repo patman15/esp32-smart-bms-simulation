@@ -14,7 +14,6 @@
 // HEADER_READ LOC No  MaxLength  CRC
 
 #include <BLEDevice.h>
-#include <BLEServer.h>
 #include <BLEUtils.h>
 #include <BLE2902.h>
 #include "datatypes.h"
@@ -37,8 +36,8 @@ void loop() {
       delay(2000);
       smartbmsdemoSendVersionInfo();
       
-      /*delay(2000);
-      smartbmsutilSendRunInfoLastBatteryValue();*/
+      //delay(2000);
+      //smartbmsutilSendRunInfoLastBatteryValue();
   
       delay(UPDATE_INTERVAL_MILLIS);
     }

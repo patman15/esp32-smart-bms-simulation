@@ -30,7 +30,7 @@ class MyServerCallbacks: public BLEServerCallbacks {
 
 class MyCallbacks: public BLECharacteristicCallbacks {
     void onWrite(BLECharacteristic *pCharacteristic) {
-      std::string rxValue = pCharacteristic->getValue();
+      String rxValue = pCharacteristic->getValue();
 
       if (rxValue.length() > 0) {
         Serial.println("*********");
@@ -48,12 +48,12 @@ class MyCallbacks: public BLECharacteristicCallbacks {
 
         if (SEND_CONTINIOUSLY == 0) {
           // send response accordingly to request
-          if (smartbmsutilIsCommandRunInfo(rxValue.data(), sizeof(rxValue))) {
+          if (smartbmsutilIsCommandRunInfo(rxValue.c_str(), sizeof(rxValue))) {
             // received command to send RunInfo -> send RunInfo data
             smartbmsdemoSendRunInfo();
             /*delay(500);
             smartbmsdemoSendVersionInfo();*/
-          } else if (smartbmsutilIsCommandSetDataInfo(rxValue.data(), sizeof(rxValue))) {
+          } else if (smartbmsutilIsCommandSetDataInfo(rxValue.c_str(), sizeof(rxValue))) {
             smartbmsdemoSendSetDataInfo();
           }
         }
